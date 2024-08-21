@@ -1,0 +1,8 @@
+1. Puedes ver un archivo package.json en esta carpeta con "express" y "prisma" listado en las dependencias.
+2. Abre una terminal y ejecuta "npm install" para instalar las dependencias.
+3. Puedes ver un archivo index.js y una carpeta prisma con un archivo schema.prisma.
+4. Vuelve a la terminal y ejecuta "npx prisma migrate dev --name init" para crear la tabla en la base de datos.
+5. Puedes ver que la tabla "Usuario" ha sido creada en la base de datos.
+6. Ejecuta en terminal "npx prisma studio" para abrir el editor de Prisma.
+7. Podrás ver la tabla "Usuario" en el editor de Prisma.
+8. ¡Listo! Has terminado el ejercicio. Puedes pasar al siguiente.

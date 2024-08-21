@@ -1,0 +1,15 @@
+1. Puedes ver un archivo package.json en esta carpeta con "express" y "prisma" listado en las dependencias.
+2. Abre una terminal y ejecuta "npm install" para instalar las dependencias.
+3. Puedes ver un archivo index.js y una carpeta prisma con un archivo schema.prisma.
+4. Vuelve a la terminal y ejecuta "npx prisma migrate dev --name init" para crear la tabla en la base de datos.
+5. Deberías ver un mensaje de error que dice "The relation field `users` on model `Clase` is missing an opposite relation field on the model `Usuario`".
+6. Abre el archivo schema.prisma y ve a la definición de la tabla "Clase".
+7. Lo que dice el error es que la tabla "Clase" tiene un campo "usuarios" que es un array de "Usuario", pero la tabla "Usuario" no tiene nada sobre "Clase".
+8. Añade un campo "clase" en la tabla "Usuario" que haga referencia a la tabla "Clase".
+9. Añade un campo "claseId" en la tabla "Usuario" que sea un Int.
+10. Añade al campo "clase" en la tabla "Usuario" la relación con la tabla "Clase" con "fields: [claseId], references: [id]".
+11. Esto significa que el "Clase" y "Usuario" se conectan con el campo "id" de "Clase" y el campo "claseId" de "Usuario".
+12. Guarda el archivo schema.prisma y vuelve a la terminal.
+13. Ejecuta "npx prisma migrate dev --name init" para crear la tabla en la base de datos.
+14. Deberías ver un mensaje de éxito que dice "Your database is now in sync with your schema.".
+15. ¡Listo! Has terminado el ejercicio. Puedes pasar al siguiente.
